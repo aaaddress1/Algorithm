@@ -1,0 +1,23 @@
+// MAX  MACRO  &X, &Y, &Z			 ---> MAX(A,B,C)
+	  LD	  r1, A
+	  LD      r2, B
+	  CMP     r1, r2
+	  JLE     ELSE0
+	  ST      r1 , &Z
+	  JMP     END0
+ELSE0: 
+	 ST       r2, &Z
+END0:
+	
+// MAX  MACRO  &X, &Y, &Z			 ---> MAX(C,D,E)
+	  LD	  r1, C
+	  LD      r2, D
+	  CMP     r1, r2
+	  JLE     ELSE1
+	  ST      r1 , &Z
+	  JMP     END1
+ELSE1: 
+	 ST       r2, &Z
+END1:
+	
+	  RET
