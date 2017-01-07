@@ -1,0 +1,20 @@
+MAX  MACRO  &X, &Y, &Z			
+	  LD	  r1, &X
+	  LD      r2, &Y
+	  CMP     r1, r2
+	  JLE     $ELSE
+	  ST      r1 , &Z
+	  JMP     $END
+$ELSE: 
+	 ST       r2, &Z
+$END:
+	MEND
+	MAX (A, B, C)
+	MAX (C, D, E)
+	RET
+
+A	WORD 	5
+B	WORD	3
+C	RESW	1
+D	WORD	7
+E	RESW	1
