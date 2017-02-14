@@ -1,0 +1,7 @@
+1. 用C++撰寫
+2. selection sort
+3. recursive merge sort
+4. iterative merge sort
+5. heapsort
+6. 心得
+7. 輸出執行時間與資料量間關係
