@@ -5,6 +5,7 @@
  * 	@brief implementat sorting algoprithms
  **/
 #include <stdio.h>
+#include <iterator>
 #include <time.h>
 #define swap(type, x, y) do{ type buff = x; x = y; y = buff; } while(0)
 #define calcTime(msg, body) { clock_t b = clock(); body; printf(msg, ((float)(clock() - b)/CLOCKS_PER_SEC)); }
@@ -22,13 +23,20 @@ void selectSort(/* input array */int *a, /* count */size_t n) {
 	}
 }
 
-int main(void) {
-	int a[] = {1, 7, 3, 2, 5}; //input array data
+int* genDataArr(int &count) {
 	int n = 5; //array length
+	static int darr[] = {1, 7, 3, 2, 5}; //input array data
+	count = n;
+	return darr;
+}
+
+int main(void) {
 
 	calcTime("selection sorting took %f seconds.\n", {
-		selectSort(a, n);
-		printArr(a, n);
+		int len;
+		int *arr = genDataArr(len);
+		selectSort(arr, len);
+		printArr(arr, len);
 	});
 
 	return 0;
