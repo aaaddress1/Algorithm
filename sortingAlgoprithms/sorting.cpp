@@ -22,8 +22,8 @@ void selectSort(/* input array */int *a, /* count */size_t n) {
 	}
 }
 
-int a[] = {1, 7, 3, 2, 5};	//input array data
-int n = 5;					//array length
+int a[] = {1, 7, 3, 2, 5}; //input array data
+int n = 5; //array length
 
 int main(void) {
 	timer("selection sorting took %f seconds.\n", {
