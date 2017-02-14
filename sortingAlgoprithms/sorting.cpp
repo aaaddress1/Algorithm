@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <time.h>
 #define swap(type, x, y) do{ type buff = x; x = y; y = buff; } while(0)
-#define calcTime(msg, body) { clock_t b = clock(); body; printf(msg, ((float)(clock() - b)/CLOCKS_PER_SEC));}
+#define calcTime(msg, body) { clock_t b = clock(); body; printf(msg, ((float)(clock() - b)/CLOCKS_PER_SEC)); }
 
 void printArr(/* output array */int *a, /* count */size_t n) {
 	for(size_t i = 0; i < n; printf("%d ", a[i]), i++);
@@ -22,10 +22,10 @@ void selectSort(/* input array */int *a, /* count */size_t n) {
 	}
 }
 
-int a[] = {1, 7, 3, 2, 5}; //input array data
-int n = 5; //array length
-
 int main(void) {
+	int a[] = {1, 7, 3, 2, 5}; //input array data
+	int n = 5; //array length
+
 	calcTime("selection sorting took %f seconds.\n", {
 		selectSort(a, n);
 		printArr(a, n);
