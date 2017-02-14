@@ -24,10 +24,12 @@ void selectSort(/* input array */int *a, /* count */size_t n) {
 }
 
 int* genDataArr(int &count) {
-	int n = 5; //array length
+	static int n = 5; //array length
 	static int darr[] = {1, 7, 3, 2, 5}; //input array data
+	int *narr = new int[n];
+	for (int i = 0; i < n; narr[i] = darr[i], i++);
 	count = n;
-	return darr;
+	return narr;
 }
 
 int main(void) {
@@ -35,6 +37,16 @@ int main(void) {
 	calcTime("selection sorting took %f seconds.\n", {
 		int len;
 		int *arr = genDataArr(len);
+		printf("curr array at %p\n", arr);
+		selectSort(arr, len);
+		printArr(arr, len);
+	});
+	puts("");
+	
+	calcTime("selection sorting took %f seconds.\n", {
+		int len;
+		int *arr = genDataArr(len);
+		printf("curr array at %p\n", arr);
 		selectSort(arr, len);
 		printArr(arr, len);
 	});
