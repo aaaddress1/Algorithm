@@ -15,6 +15,7 @@ void printArr(/* output array */int *a, /* count */size_t n) {
 	puts("");
 }
 
+/* Selection Sorting */
 void selectSort(/* input array */int *a, /* count */size_t n) {
 	for(int i = 0, j = 0, p = 0; i < n - 1; i++) {
 		p = i;
@@ -22,6 +23,8 @@ void selectSort(/* input array */int *a, /* count */size_t n) {
 		swap(int, a[p], a[i]);
 	}
 }
+
+/* Merge Sorting */
 
 int* genDataArr(int &count) {
 	static int n = 5; //array length
@@ -40,15 +43,17 @@ int main(void) {
 		printf("curr array at %p\n", arr);
 		selectSort(arr, len);
 		printArr(arr, len);
+		delete arr;
 	});
 	puts("");
-	
+
 	calcTime("selection sorting took %f seconds.\n", {
 		int len;
 		int *arr = genDataArr(len);
 		printf("curr array at %p\n", arr);
 		selectSort(arr, len);
 		printArr(arr, len);
+		delete arr;
 	});
 
 	return 0;
