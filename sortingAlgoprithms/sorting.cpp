@@ -25,7 +25,7 @@ void selectSort(/* input array */int *a, /* count */size_t n) {
 }
 
 /* Merge Sorting */
-void merge(/* input array */int *a, /* left array count */int n1, /* right array count */int n2) {
+void merge(/* input array */int *a, /* left array count */size_t n1, /* right array count */size_t n2) {
 	int n(n1 + n2);
 	int *tmp(new int[n]);
 	int *left_a(a), *right_a(a + n1);
@@ -46,7 +46,7 @@ void merge(/* input array */int *a, /* left array count */int n1, /* right array
 		a[pos] = tmp[pos];
 }
 
-void mergeSort(/* input array */int *a, /* count */int n) {
+void mergeSort(/* input array */int *a, /* count */size_t n) {
 	if (n <= 1) return;
 	int half_len = n / 2;
 	mergeSort(a, half_len);
