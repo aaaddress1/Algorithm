@@ -2,6 +2,9 @@
  * @file gcd.cpp
  * @author 10303118a
  * @date 2017/03/01
+ *
+ * @referer: Extended Euclidean algorithm 
+ * 			 https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
  **/
 #include <stdio.h>
 #define MAX_LEN (100)
