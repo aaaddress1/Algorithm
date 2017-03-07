@@ -1,5 +1,5 @@
                     	   10000	   50000	  100000	  150000	  200000	  250000	
-      insertion sort	   0.093 s	   2.044 s	   8.283 s	  19.048 s	  40.607 s	  60.762 s	
-recursive merge sort	   0.000 s	   0.016 s	   0.031 s	   0.047 s	   0.062 s	   0.094 s	
-iterative merge sort	   0.000 s	   0.015 s	   0.031 s	   0.047 s	   0.062 s	   0.078 s	
-           heap sort	   0.000 s	   0.015 s	   0.032 s	   0.046 s	   0.063 s	   0.078 s	
+      insertion sort	   0.084 s	   2.131 s	   8.318 s	  19.223 s	  38.393 s	  59.928 s	
+recursive merge sort	   0.003 s	   0.018 s	   0.038 s	   0.054 s	   0.076 s	   0.100 s	
+iterative merge sort	   0.003 s	   0.016 s	   0.037 s	   0.055 s	   0.072 s	   0.100 s	
+           heap sort	   0.002 s	   0.011 s	   0.023 s	   0.037 s	   0.053 s	   0.065 s	
